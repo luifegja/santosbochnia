@@ -87,9 +87,19 @@
 }
 @keyframes hint { 0% { opacity: 0; top: 8px; } 35% { opacity: 1; } 100% { opacity: 0; top: 24px; } }
 
-/* ---------- Barra de credibilidade ---------- */
-.stats-band { background: var(--paper); border-block: 1px solid var(--hairline); padding-block: 3rem; }
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+/* ---------- Barra de credibilidade (navy) ---------- */
+.stats-band {
+  position: relative; overflow: hidden; padding-block: 3.4rem;
+  background:
+    radial-gradient(820px 380px at 82% -30%, rgba(119, 185, 201, .16), transparent 62%),
+    linear-gradient(168deg, var(--navy) 0%, var(--navy-deep) 100%);
+}
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; position: relative; }
+.stats-band .stat .num {
+  background: linear-gradient(135deg, #9AD7E9 0%, #77B9C9 45%, #519EAD 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.stats-band .stat .label { color: #A9C3D3; }
 @media (max-width: 900px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ---------- Manifesto ---------- */

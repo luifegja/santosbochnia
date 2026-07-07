@@ -122,12 +122,12 @@ p { text-wrap: pretty; }
 .site-header.is-scrolled { border-bottom-color: var(--hairline); background: color-mix(in srgb, var(--ice) 94%, transparent); }
 .site-header .bar {
   display: flex; align-items: center; justify-content: space-between; gap: 1rem;
-  min-height: 76px; transition: min-height .3s var(--ease-out);
+  min-height: 92px; transition: min-height .3s var(--ease-out);
 }
-.site-header.is-scrolled .bar { min-height: 62px; }
+.site-header.is-scrolled .bar { min-height: 74px; }
 .brand { display: inline-flex; align-items: center; }
-.brand img { height: 46px; width: auto; transition: height .3s var(--ease-out); }
-.site-header.is-scrolled .brand img { height: 38px; }
+.brand img { height: 68px; width: auto; transition: height .3s var(--ease-out); }
+.site-header.is-scrolled .brand img { height: 54px; }
 
 /* ---------- Footer compartilhado ---------- */
 .site-footer { background: var(--navy); color: #C9DBE6; font-size: var(--fs-small); }
