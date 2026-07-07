@@ -13,8 +13,11 @@ site/     → o site pronto para deploy (estático puro, sem build)
   css/base.css          → design system (tokens); home.css; lp.css
   js/main.js            → reveals/contadores/FAQ; js/hero3d.js → cena Three.js (só no index)
   assets/img/ia/        → imagens geradas por IA (Higgsfield Soul 2.0)
+  assets/img/mapa-brasil-atuacao.svg → mapa dot-matrix (seção Alcance Nacional do index)
   LEIA-ME-PUBLICACAO.md → guia de publicação para o cliente
 ```
+
+O mapa é gerado por script Python (dot-grid + point-in-polygon sobre GeoJSON dos estados) — para alterar os estados destacados, regenerar a partir do geojson `brazil-states` ajustando o set `COBERTOS`. Estados hoje NÃO destacados: AC, MA, RR, SE, TO.
 
 ## Identidade visual (extraída do PDF vetorial do logo — cores exatas)
 
@@ -41,6 +44,7 @@ site/     → o site pronto para deploy (estático puro, sem build)
 ## Pendências (aguardando o cliente)
 
 - Números OAB dos sócios → inserir nos pontos `<!-- TODO: incluir OAB/SP nº -->` (index + 4 LPs)
+- **Confirmar o 23º estado de atuação**: a lista enviada pelo cliente tinha 22 UFs únicas (o item "RN/SP" duplicava estados); o contador diz 23. Faltam na lista: AC, MA, RR, SE, TO → destacar o confirmado no mapa
 - Anos de experiência combinada (contador da home)
 - Fotos profissionais (substituem os "retratos de monograma" JS/SB)
 - Meta Pixel / Google Tag nas LPs quando as campanhas forem criadas

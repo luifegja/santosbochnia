@@ -183,6 +183,31 @@
 .socio-cred li { padding-left: 1.1rem; position: relative; margin-top: .35rem; }
 .socio-cred li::before { content: "·"; position: absolute; left: .2rem; color: var(--teal); font-weight: 700; }
 
+/* ---------- Alcance nacional ---------- */
+.alcance { background: var(--paper); border-block: 1px solid var(--hairline); overflow: hidden; }
+.alcance-grid {
+  display: grid; grid-template-columns: 6fr 5fr; gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: center;
+}
+@media (max-width: 860px) { .alcance-grid { grid-template-columns: 1fr; } }
+.alcance-copy > p:not(.eyebrow) { color: var(--ink-soft); font-size: 1.06rem; max-width: 36em; }
+.alcance-stat { display: flex; align-items: baseline; gap: 1rem; margin-top: 2.2rem; }
+.alcance-num {
+  font-family: var(--serif); font-weight: 600; line-height: .9;
+  font-size: clamp(4.5rem, 9vw, 7rem);
+  background: linear-gradient(135deg, #519EAD 0%, #2E7590 60%, #0D3557 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  font-variant-numeric: lining-nums;
+}
+.alcance-label { max-width: 11em; font-size: 1.02rem; color: var(--ink-soft); font-weight: 500; line-height: 1.4; }
+.alcance-notas { margin: 2rem 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: .6rem 2rem; font-size: .9rem; color: var(--ink-soft); }
+.alcance-notas li { display: inline-flex; align-items: center; gap: .55rem; }
+.alcance-notas .dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
+.alcance-notas .dot-on { background: #2E7590; }
+.alcance-notas .dot-hq { background: var(--navy); box-shadow: 0 0 0 3px rgba(37, 211, 102, .35); }
+.alcance-mapa { margin: 0; }
+.alcance-mapa img { width: 100%; max-width: 460px; height: auto; margin-inline: auto; }
+
 /* ---------- Como atuamos ---------- */
 .metodo { background: var(--paper); border-block: 1px solid var(--hairline); }
 .metodo-steps {
@@ -192,13 +217,15 @@
 }
 @media (max-width: 860px) { .metodo-steps { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .metodo-steps { grid-template-columns: 1fr; } }
-.metodo-steps li { position: relative; padding-top: 1.3rem; border-top: 2px solid var(--teal); }
+.metodo-steps li { padding-top: 1.5rem; border-top: 2px solid var(--teal); }
 .step-n {
-  position: absolute; top: -1.55rem; left: 0;
-  font-family: var(--serif); font-size: 2.6rem; font-weight: 600; color: var(--teal);
+  display: block; line-height: 1; margin-bottom: 1rem;
+  font-family: var(--serif); font-size: 3.2rem; font-weight: 600;
+  background: linear-gradient(160deg, #9AD7E9 0%, #519EAD 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .metodo-steps h3 { font-size: 1.25rem; }
-.metodo-steps p { margin-top: .5rem; color: var(--ink-soft); font-size: .95rem; }
+.metodo-steps p { margin-top: .6rem; color: var(--ink-soft); font-size: .95rem; }
 
 /* ---------- Contato ---------- */
 .contato-grid {
