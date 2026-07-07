@@ -7,8 +7,8 @@
 
 body.lp { background: var(--paper); }
 
-/* Previdenciário: público 50+ → corpo maior */
-body.lp--prev { font-size: clamp(1.06rem, .4vw + 1rem, 1.19rem); }
+/* Previdenciário e Consumidor (fraudes em consignado): público 50+ → corpo maior */
+body.lp--prev, body.lp--consumidor { font-size: clamp(1.06rem, .4vw + 1rem, 1.19rem); }
 /* Penal: atmosfera mais fechada */
 body.lp--penal { --ice: #F2F6F8; }
 
