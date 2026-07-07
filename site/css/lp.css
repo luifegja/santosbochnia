@@ -62,20 +62,34 @@ body.lp--penal .trust-line { color: #9DB6C6; }
 .trust-line span::before { content: "✓"; color: var(--petrol); font-weight: 700; }
 body.lp--penal .trust-line span::before { color: var(--teal); }
 
+/* ---------- Destaques persuasivos (negrito + marca-texto) ---------- */
+.lp-sub strong, .check-list strong, .faq-body strong, .passo p strong, .selo p strong {
+  color: var(--navy); font-weight: 700;
+}
+.faq-body strong { color: var(--petrol); }
+.hl { /* marca-texto turquesa sutil sob a palavra-chave */
+  background: linear-gradient(transparent 58%, rgba(154, 215, 233, .6) 58%);
+  padding-inline: .05em;
+}
+.lp-cta .hl { /* sobre navy: marcador verde discreto */
+  background: linear-gradient(transparent 58%, rgba(37, 211, 102, .4) 58%);
+}
+body.lp--penal .lp-hero .hl { background: linear-gradient(transparent 58%, rgba(119, 185, 201, .35) 58%); }
+
 /* ---------- Checklist "é para você se..." ---------- */
 .sintomas { padding-block: var(--sect); }
 .sintomas h2, .lp h2 { font-size: var(--fs-h2); }
 .check-list { margin: clamp(1.8rem, 4vw, 2.6rem) 0 0; padding: 0; list-style: none; display: grid; gap: .9rem; max-width: 720px; }
 .check-list li {
-  display: flex; gap: .9rem; align-items: flex-start;
+  position: relative;
   background: var(--ice); border: 1px solid var(--hairline); border-radius: 12px;
-  padding: 1.05rem 1.3rem; font-weight: 500;
+  padding: 1.05rem 1.3rem 1.05rem 3.6rem; font-weight: 500;
 }
 .check-list li::before {
-  content: "✓"; flex: none; width: 1.7em; height: 1.7em; border-radius: 50%;
+  content: "✓"; position: absolute; left: 1.15rem; top: 1.05rem;
+  width: 1.7em; height: 1.7em; border-radius: 50%;
   display: inline-flex; align-items: center; justify-content: center;
   background: var(--teal); color: var(--navy); font-weight: 700; font-size: .9em;
-  margin-top: .05em;
 }
 .sintomas .btn-wa { margin-top: 2.2rem; }
 
