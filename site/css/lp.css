@@ -67,14 +67,17 @@ body.lp--penal .trust-line span::before { color: var(--teal); }
   color: var(--navy); font-weight: 700;
 }
 .faq-body strong { color: var(--petrol); }
-.hl { /* marca-texto turquesa sutil sob a palavra-chave */
-  background: linear-gradient(transparent 58%, rgba(154, 215, 233, .6) 58%);
-  padding-inline: .05em;
+.hl { /* marca-texto turquesa cobrindo o texto inteiro, linha a linha */
+  background: rgba(154, 215, 233, .45);
+  padding: .04em .12em;
+  border-radius: .12em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .lp-cta .hl { /* sobre navy: marcador verde discreto */
-  background: linear-gradient(transparent 58%, rgba(37, 211, 102, .4) 58%);
+  background: rgba(37, 211, 102, .32);
 }
-body.lp--penal .lp-hero .hl { background: linear-gradient(transparent 58%, rgba(119, 185, 201, .35) 58%); }
+body.lp--penal .lp-hero .hl { background: rgba(119, 185, 201, .28); }
 
 /* ---------- Checklist "é para você se..." ---------- */
 .sintomas { padding-block: var(--sect); }
