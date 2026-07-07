@@ -82,22 +82,15 @@
     planeGeo.rotateX(-Math.PI / 2.35);
     var basePos = planeGeo.attributes.position.array.slice();
 
-    // Mesh wireframe compartilha o MESMO buffer da planeGeo animada
-    var wire = new THREE.Mesh(
-      planeGeo,
-      new THREE.MeshBasicMaterial({ color: 0x0d3557, wireframe: true, transparent: true, opacity: 0.13 })
-    );
-    wire.position.set(0, -7.5, -6);
-    scene.add(wire);
-
+    // campo de pontos discreto (sem wireframe — o grid ficava pesado demais)
     var pts = new THREE.Points(planeGeo, new THREE.PointsMaterial({
-      color: 0x77b9c9, size: isMobile ? 0.16 : 0.13, transparent: true, opacity: 0.55, sizeAttenuation: true
+      color: 0x77b9c9, size: isMobile ? 0.13 : 0.11, transparent: true, opacity: 0.32, sizeAttenuation: true
     }));
-    pts.position.copy(wire.position);
+    pts.position.set(0, -9, -9);
     scene.add(pts);
 
     /* ----- partículas em deriva ----- */
-    var N = isMobile || lowEnd ? 120 : 260;
+    var N = isMobile || lowEnd ? 90 : 170;
     var pGeo = new THREE.BufferGeometry();
     var pArr = new Float32Array(N * 3), pSpeed = new Float32Array(N);
     for (var i = 0; i < N; i++) {
@@ -108,7 +101,7 @@
     }
     pGeo.setAttribute("position", new THREE.BufferAttribute(pArr, 3));
     var drift = new THREE.Points(pGeo, new THREE.PointsMaterial({
-      color: 0x9ad7e9, size: 0.14, transparent: true, opacity: 0.32, sizeAttenuation: true
+      color: 0x9ad7e9, size: 0.13, transparent: true, opacity: 0.22, sizeAttenuation: true
     }));
     scene.add(drift);
 
@@ -186,8 +179,8 @@
       for (var i = 0; i < pos.count; i++) {
         var ix = i * 3;
         var x = basePos[ix], z = basePos[ix + 2];
-        var h = noise(x * 0.045 + t * 0.05, z * 0.06 + t * 0.038) * 2.2
-              + noise(x * 0.012 - t * 0.02, z * 0.018) * 3.6;
+        var h = noise(x * 0.045 + t * 0.05, z * 0.06 + t * 0.038) * 1.7
+              + noise(x * 0.012 - t * 0.02, z * 0.018) * 2.8;
         pos.array[ix + 1] = basePos[ix + 1] + h;
       }
       pos.needsUpdate = true;
