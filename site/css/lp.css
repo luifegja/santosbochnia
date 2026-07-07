@@ -67,17 +67,11 @@ body.lp--penal .trust-line span::before { color: var(--teal); }
   color: var(--navy); font-weight: 700;
 }
 .faq-body strong { color: var(--petrol); }
-.hl { /* marca-texto turquesa cobrindo o texto inteiro, linha a linha */
-  background: rgba(154, 215, 233, .45);
-  padding: .04em .12em;
-  border-radius: .12em;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
+.hl { /* palavra-chave em cor de contraste (azul-petróleo da marca) */
+  color: var(--petrol);
 }
-.lp-cta .hl { /* sobre navy: marcador verde discreto */
-  background: rgba(37, 211, 102, .32);
-}
-body.lp--penal .lp-hero .hl { background: rgba(119, 185, 201, .28); }
+.lp-cta .hl { color: var(--teal-light); } /* sobre navy: turquesa clara */
+body.lp--penal .lp-hero .hl { color: var(--teal-light); }
 
 /* ---------- Checklist "é para você se..." ---------- */
 .sintomas { padding-block: var(--sect); }
