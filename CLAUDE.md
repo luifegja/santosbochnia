@@ -35,6 +35,10 @@ O mapa é gerado por script Python (dot-grid + point-in-polygon sobre GeoJSON do
 4. **Referências de design**: onepage = espírito Pinheiro Neto (editorial, sóbrio); LPs = mecânica Dolman Law comprimida (CTA repetido + sticky, prova numérica, FAQ de objeções).
 5. Editar as LPs: `previdenciario.html` é o template master (pontos parametrizáveis marcados com `<!-- PARAM: -->`); mudanças estruturais devem replicar nas 4.
 
+## Criativos de anúncio
+
+Tarefas de criativos (carrossel/estático para tráfego pago): **ler `criativos/CRIATIVOS.md` primeiro** — contém o pipeline HTML→PNG (render.py), o conceito visual "O Fio", convenção de nomes e o inventário do que já foi produzido. Não gerar artes 100% por IA; os criativos são HTML/CSS renderizados com as cores/fontes do site.
+
 ## Deploy
 
 - **GitHub**: https://github.com/luifegja/santosbochnia (repo = esta pasta inteira; o site fica em `site/`)
