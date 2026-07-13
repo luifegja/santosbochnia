@@ -11,6 +11,8 @@ def make(filename, replacements, extra_css=""):
         out = out.replace(old, new)
     if extra_css:
         out = out.replace("</style>", extra_css + "\n</style>")
+    import unicodedata
+    out = unicodedata.normalize("NFC", out)
     with open(filename, "w", encoding="utf-8") as f:
         f.write(out)
     print("criado:", filename)
@@ -43,7 +45,7 @@ make("consumidor-carrossel-01.html", [
     ('<div class="via"><span class="n">3</span><span class="t">Novo requerimento</span><span class="d">com a documentação adequada</span></div>',
      '<div class="via"><span class="n">3</span><span class="t">Revisão da margem consignável</span><span class="d">a lei limita quanto podem descontar</span></div>'),
     ('<p class="nota">Cada caso exige análise individual — e é exatamente isso que fazemos.</p>',
-     '<p class="nota">Cada caso exige análise individual — comece pelo seu extrato do Meu INSS.</p>'),
+     '<p class="nota">Cada caso exige análise individual — comece pelo seu extrato do Meu&nbsp;INSS.</p>'),
     ('<div class="nome">Simone Bochnia dos Anjos</div>\n        <div class="cargo">Sócia-fundadora — Direito Previdenciário</div>\n        <p class="bio">Especialista em Direito Previdenciário, conduz cada caso com rigor técnico e acompanhamento próximo e humanizado.</p>',
      '<div class="nome">Equipe Santos &amp; Bochnia</div>\n        <div class="cargo">Direito do Consumidor — fraudes bancárias</div>\n        <p class="bio">Equipe coordenada pelos sócios-fundadores José Eduardo dos Santos e Simone Bochnia dos Anjos: rigor técnico e atendimento direto.</p>'),
     ('<h2>Vamos analisar o seu&nbsp;caso.</h2>\n    <p class="sub">Conte sua situação pelo WhatsApp e entenda seus direitos em linguagem simples.</p>',
@@ -106,6 +108,8 @@ make("penal-economico-carrossel-01.html", [
   .card-1 h1 { color: #fff; }
   .card-1 .sub { color: #B9CFDD !important; }
   .ghost-2 { color: rgba(255,255,255,.07) !important; }
+  .bleed-b { width: 520px; height: 340px; }
+  .bleed-b img { object-position: 50% 42%; }
 """)
 
 # ============ IMOBILIÁRIO ============
@@ -115,7 +119,7 @@ make("imobiliario-carrossel-01.html", [
     ('class="bleed bleed-b"><img src="../../site/assets/img/ia/escritorio-interior.webp"',
      'class="bleed bleed-b"><img src="../../site/assets/img/ia/faria-lima-fachada.webp"'),
     ('<p class="eyebrow">Direito Previdenciário</p>\n    <h1>O INSS <span class="hl">negou</span> seu benefício?</h1>\n    <p class="sub">Isso não precisa ser o fim da história. Em muitos casos, a decisão pode ser questionada.</p>',
-     '<p class="eyebrow">Direito Imobiliário</p>\n    <h1>Vai assinar a compra de um imóvel? <span class="hl">Antes, deixe um advogado ler.</span></h1>\n    <p class="sub">O imóvel é o maior patrimônio da sua vida — proteja-o antes de assinar.</p>'),
+     '<p class="eyebrow">Direito Imobiliário</p>\n    <h1>Vai assinar a compra de um imóvel? <span class="hl">Antes, deixe um advogado&nbsp;ler.</span></h1>\n    <p class="sub">O imóvel é o maior patrimônio da sua vida — proteja-o antes de assinar.</p>'),
     ("<h2>Alguma dessas histórias parece a&nbsp;sua?</h2>", "<h2>Esta história pode ser a&nbsp;sua…</h2>"),
     ('<div class="chk"><strong>Aposentadoria negada</strong> por idade, tempo de contribuição ou especial</div>',
      '<div class="chk"><strong>A construtora atrasou</strong> a entrega da sua obra</div>'),

@@ -31,21 +31,22 @@
   /* ---- camada 2: fotos sangrando nas emendas ---- */
   .bleed { position: absolute; border-radius: 22px; overflow: hidden; box-shadow: 0 30px 80px rgba(13,53,87,.35); }
   .bleed img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .bleed-a { left: 710px; top: 700px; width: 620px; height: 470px; transform: rotate(-3deg); }
-  .bleed-a img { object-position: 22% 50%; }
-  .bleed-a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(200deg, rgba(13,53,87,.0) 55%, rgba(13,53,87,.35)); }
-  .bleed-b { left: 4085px; top: 78px; width: 520px; height: 350px; transform: rotate(2.2deg); }
-  .bleed-b::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,53,87,.0) 50%, rgba(13,53,87,.3)); }
+  .bleed { box-shadow: 0 18px 48px rgba(13,53,87,.22); }
+  .bleed-a { left: 800px; top: 720px; width: 500px; height: 390px; transform: rotate(-2deg); }
+  .bleed-a img { object-position: 72% 50%; }
+  .bleed-a::after { content: ""; position: absolute; inset: 0; background: linear-gradient(200deg, rgba(13,53,87,.0) 55%, rgba(13,53,87,.28)); }
+  .bleed-b { left: 4150px; top: 96px; width: 440px; height: 300px; transform: rotate(1.5deg); }
+  .bleed-b::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(13,53,87,.0) 50%, rgba(13,53,87,.24)); }
 
   /* ---- camada 3: o fio ---- */
   .fio { position: absolute; inset: 0; pointer-events: none; }
 
-  /* ---- camada 4: numerais fantasma nas emendas ---- */
-  .ghost { position: absolute; font-family: var(--serif); font-weight: 600; font-size: 620px; line-height: 1; top: 40px; }
-  .ghost-2 { left: 928px;  color: rgba(13,53,87,.06); }
-  .ghost-3 { left: 2028px; color: rgba(13,53,87,.07); top: 620px; }
-  .ghost-4 { left: 3105px; color: rgba(255,255,255,.07); top: 560px; }
-  .ghost-5 { left: 4198px; color: rgba(13,53,87,.06); }
+  /* ---- camada 4: numerais fantasma nas emendas (sutis, zonas vazias) ---- */
+  .ghost { position: absolute; font-family: var(--serif); font-weight: 600; font-size: 440px; line-height: 1; top: 48px; }
+  .ghost-2 { left: 966px;  color: rgba(13,53,87,.035); }
+  .ghost-3 { left: 2052px; color: rgba(13,53,87,.04); }
+  .ghost-4 { left: 3132px; color: rgba(255,255,255,.05); }
+  .ghost-5 { left: 4216px; color: rgba(13,53,87,.035); }
 
   /* ---- camada 5: conteúdo dos cards ---- */
   .card { position: absolute; top: 0; width: 1080px; height: 1350px; padding: 96px 88px; }
@@ -56,19 +57,20 @@
   .eyebrow::before { content: ""; width: 54px; height: 3px; background: var(--teal); }
   .eyebrow--light { color: var(--teal-light); }
 
-  h1, h2 { font-family: var(--serif); font-weight: 600; color: var(--navy); line-height: 1.04; letter-spacing: -.01em; }
+  h1, h2 { font-family: var(--serif); font-weight: 600; color: var(--navy); line-height: 1.08; letter-spacing: -.01em; }
+  .card-2 h2, .card-3 h2, .card-4 h2 { margin-top: 30px; } /* ritmo uniforme kicker→título */
   .hl { color: var(--petrol); }
   .hl-light { color: var(--teal-light); }
 
   .swipe {
-    position: absolute; right: 44px; bottom: 52px;
-    display: inline-flex; align-items: center; gap: 14px;
-    font-size: 28px; font-weight: 600; color: var(--petrol);
-    background: rgba(255,255,255,.78); border: 2px solid rgba(46,117,144,.35);
-    padding: 16px 30px; border-radius: 999px; backdrop-filter: blur(4px);
+    position: absolute; right: 44px; bottom: 48px;
+    display: inline-flex; align-items: center; gap: 12px;
+    font-size: 24px; font-weight: 600; color: var(--petrol);
+    background: rgba(255,255,255,.85); border: 1.5px solid rgba(46,117,144,.28);
+    padding: 12px 26px; border-radius: 999px;
   }
-  .swipe--dark { background: rgba(9,42,70,.55); color: var(--teal-light); border-color: rgba(154,215,233,.4); }
-  .swipe .chev { letter-spacing: -2px; font-weight: 700; font-size: 32px; }
+  .swipe--dark { background: rgba(9,42,70,.6); color: var(--teal-light); border-color: rgba(154,215,233,.32); }
+  .swipe .chev { letter-spacing: -2px; font-weight: 700; font-size: 27px; }
 
   .brandmark { position: absolute; left: 88px; bottom: 52px; height: 88px; }
   .brandmark img { height: 100%; width: auto; }
@@ -93,13 +95,13 @@
 
   /* card 3 (navy) */
   .card-3 h2 { color: #fff; font-size: 96px; max-width: 9.5em; }
-  .vias { margin-top: 70px; display: grid; gap: 0; max-width: 830px; }
-  .via { display: flex; align-items: baseline; gap: 28px; padding: 34px 0; border-top: 1px solid rgba(255,255,255,.18); }
+  .vias { margin-top: 70px; display: grid; gap: 0; max-width: 860px; }
+  .via { display: grid; grid-template-columns: 72px 390px 1fr; column-gap: 26px; align-items: baseline; padding: 42px 0; border-top: 1px solid rgba(255,255,255,.18); }
   .via:last-child { border-bottom: 1px solid rgba(255,255,255,.18); }
-  .via .n { font-family: var(--serif); font-size: 56px; color: var(--teal); font-weight: 600; }
+  .via .n { font-family: var(--serif); font-size: 56px; color: var(--teal); font-weight: 600; line-height: .8; }
   .via .t { font-size: 40px; font-weight: 600; color: #EAF3F7; }
-  .via .d { font-size: 30px; color: #A9C3D3; margin-left: auto; text-align: right; }
-  .card-3 .nota { margin-top: 56px; font-size: 28px; color: #9DB6C6; font-style: italic; font-family: var(--serif); font-size: 34px; }
+  .via .d { font-size: 30px; color: #A9C3D3; text-align: left; line-height: 1.35; }
+  .card-3 .nota { margin-top: 72px; color: #9DB6C6; font-style: italic; font-family: var(--serif); font-size: 34px; }
 
   /* card 4 */
   .card-4 h2 { font-size: 84px; max-width: 8.6em; }
@@ -121,11 +123,11 @@
     margin-top: 70px; display: inline-flex; align-items: center; gap: 22px;
     background: var(--wa); color: var(--wa-ink); font-weight: 700; font-size: 44px;
     padding: 38px 74px; border-radius: 999px;
-    box-shadow: 0 10px 30px rgba(18,140,78,.45), 0 30px 80px rgba(18,140,78,.30);
+    box-shadow: 0 12px 40px rgba(37,211,102,.32);
   }
-  .btn-wa svg { width: 52px; height: 52px; }
+  .btn-wa .arrow { font-family: var(--sans); font-weight: 700; }
   .card-5 .canal { margin-top: 44px; font-size: 30px; color: #9DB6C6; letter-spacing: .04em; }
-  .compliance { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 88%; font-size: 19px; color: #7F9BAF; line-height: 1.5; }
+  .compliance { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); width: 88%; font-size: 19px; color: #93ADC0; line-height: 1.5; }
 
   /* ---------- ARTE ESTÁTICA ---------- */
   .card--static { position: relative; left: 0; padding: 96px 92px 72px; overflow: hidden;
@@ -151,21 +153,17 @@
 <div class="strip">
   <div class="bg bg-1"></div><div class="bg bg-2"></div><div class="bg bg-3"></div><div class="bg bg-4"></div><div class="bg bg-5"></div>
 
-  <!-- fio contínuo -->
+  <!-- fio contínuo — rota "silenciosa" pela margem inferior, sem cruzar texto -->
   <svg class="fio" width="5400" height="1350" viewBox="0 0 5400 1350" fill="none">
-    <path d="M 150 1140
-             C 620 1140, 760 950, 1080 950
-             C 1500 950, 1700 430, 2160 400
-             C 2620 370, 2820 760, 3240 760
-             C 3700 760, 3900 520, 4320 520
-             C 4650 520, 4780 700, 4860 830"
-          stroke="#77B9C9" stroke-width="6" stroke-linecap="round" opacity=".85"/>
-    <circle cx="150" cy="1140" r="14" fill="#77B9C9"/>
-    <circle cx="1080" cy="950" r="9" fill="#77B9C9"/>
-    <circle cx="2160" cy="400" r="9" fill="#9AD7E9"/>
-    <circle cx="3240" cy="760" r="9" fill="#9AD7E9"/>
-    <circle cx="4320" cy="520" r="9" fill="#77B9C9"/>
-    <circle cx="4860" cy="830" r="16" fill="#25D366"/>
+    <path d="M 150 1200
+             C 560 1200, 720 1272, 1080 1272
+             C 1560 1272, 1760 1252, 2160 1252
+             C 2640 1252, 2800 1290, 3240 1290
+             C 3720 1290, 3880 1248, 4320 1248
+             C 4560 1248, 4720 1214, 4960 1208"
+          stroke="#77B9C9" stroke-width="3.5" stroke-linecap="round" opacity=".45"/>
+    <circle cx="150" cy="1200" r="9" fill="#77B9C9" opacity=".6"/>
+    <circle cx="4960" cy="1208" r="9" fill="#25D366" opacity=".8"/>
   </svg>
 
   <!-- numerais fantasma cruzando as emendas -->
@@ -209,7 +207,7 @@
       <div class="via"><span class="n">2</span><span class="t">Devolução dos valores</span><span class="d">em determinados casos, em dobro</span></div>
       <div class="via"><span class="n">3</span><span class="t">Revisão da margem consignável</span><span class="d">a lei limita quanto podem descontar</span></div>
     </div>
-    <p class="nota">Cada caso exige análise individual — comece pelo seu extrato do Meu INSS.</p>
+    <p class="nota">Cada caso exige análise individual — comece pelo seu extrato do Meu&nbsp;INSS.</p>
     <div class="swipe swipe--dark"><span>arraste</span><span class="chev">››</span></div>
   </section>
 
@@ -238,10 +236,7 @@
     <img class="logo" src="../../site/assets/img/logo-light.png" alt="Santos & Bochnia Advogados">
     <h2>Chega de descontos que você não&nbsp;pediu.</h2>
     <p class="sub">Envie seu extrato pelo WhatsApp e entenda o que pode ser contestado.</p>
-    <span class="btn-wa">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.33-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.4"/></svg>
-      Chamar no WhatsApp
-    </span>
+    <span class="btn-wa">Saiba mais <span class="arrow">&#8594;</span></span>
     <p class="canal">(11) 97899-2799 · santosbochnia.adv.br</p>
     <p class="compliance">Conteúdo meramente informativo, em conformidade com o Provimento nº 205/2021 do CFOAB e o Código de Ética e Disciplina da OAB.</p>
   </section>
@@ -258,10 +253,7 @@
       <div class="chk"><strong>Desconto de RMC/RCC</strong> no benefício</div>
       <div class="chk"><strong>Dívida renovada</strong> sem autorização</div>
     </div>
-    <span class="btn-wa">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.9 1.22 3.1.15.2 2.1 3.2 5.1 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.58-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35M12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88m8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.33-1.66a11.9 11.9 0 0 0 5.66 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.4"/></svg>
-      Chamar no WhatsApp
-    </span>
+    <span class="btn-wa">Saiba mais <span class="arrow">&#8594;</span></span>
     <div class="rodape">
       <img src="../../site/assets/img/logo-light.png" alt="Santos & Bochnia Advogados">
       <p class="compliance">Conteúdo meramente informativo — Provimento nº 205/2021 CFOAB e Código de Ética e Disciplina da OAB.</p>

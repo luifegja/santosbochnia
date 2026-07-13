@@ -17,9 +17,9 @@ Os criativos são **HTML/CSS renderizados em PNG** (nunca arte gerada 100% por I
 - Logos prontos: `../site/assets/img/logo-light.png` (p/ navy), `logo-dark.png` (p/ claro), `monograma-sb.svg`/`.webp` (degradê turquesa)
 - Fotos on-brand existentes: `../site/assets/img/ia/*.webp` (8) + auxiliares wide em `_fontes/ref/`
 
-## Conceito visual dos carrosséis — "O Fio"
+## Conceito visual dos carrosséis — "O Fio" (v2, sutil)
 
-Um **fio turquesa contínuo de 6px** atravessa os 5 cards em alturas variadas, costurando a narrativa e induzindo o swipe. Reforços de continuidade: fotos e formas **sangrando na emenda** entre cards (metade em um, metade no outro), numeração fantasma gigante (1–5) em Cormorant, chevrons "arraste →" na borda direita dos cards 1–4. Narrativa fixa: **1 gancho (dor) → 2 agitação/situações → 3 o direito existe → 4 como funciona/confiança → 5 CTA WhatsApp** (navy + logo clara + linha de conformidade OAB).
+Um **fio turquesa de 3.5px a 45% de opacidade** percorre a MARGEM INFERIOR dos 5 cards (rota "silenciosa" — nunca cruza texto; termina em ponto verde no card 5, abaixo da linha de contato). Continuidade reforçada por: fotos inclinadas **sangrando na emenda** (1→2 e 4→5), numerais fantasma (440px, opacidade ≤.05, zonas vazias das emendas) e pill "arraste ››". Narrativa fixa: **1 gancho (dor) → 2 situações → 3 o direito existe → 4 quem cuida → 5 CTA "Saiba mais →"** (botão verde imitando o CTA nativo do Meta; sem promessa de WhatsApp direto). Regra de ouro da v2 (feedback do usuário): elementos de continuidade NUNCA podem atrapalhar a leitura — em dúvida, esconda. Card 3 usa grid de 3 colunas alinhadas à esquerda (não zigue-zague). Auditoria de design por subagente é etapa obrigatória antes de entregar.
 
 ## Regras de copy (OAB Provimento 205/2021 — OBRIGATÓRIO)
 
